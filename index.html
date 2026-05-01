@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LIFECODE — Your Daily Macros</title>
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E💪%3C/text%3E%3C/svg%3E" />  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="logo">
+        <i class="fa-solid fa-dumbbell"></i>
+        <span>LIFECODE</span>
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#calculator">Calculator</a></li>
+          <li><a href="#programs">Programs</a></li>
+          <li><a href="#recipes">Recipes</a></li>
+        </ul>
+      </nav>
+      <a href="#calculator" class="btn btn-primary btn-small">
+        Get Macros <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <span class="section-tag">
+        <i class="fa-solid fa-fire"></i> Fitness · Nutrition · Life
+      </span>
+      <h1 class="hero-title">
+        PUSH YOUR<br />
+        <span class="highlight">LIMITS.</span>
+      </h1>
+      <p class="hero-text">
+        Find out your daily protein, carbs, fat, and water needs in 5 easy steps. Free, fast, no sign-up.
+      </p>
+      <div class="hero-buttons">
+        <a href="#calculator" class="btn btn-primary">
+          Calculate My Macros <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <a href="#programs" class="btn btn-outline">
+          <i class="fa-solid fa-eye"></i> Exercises
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-number">5</span><span class="stat-label">Questions</span></div>
+        <div class="stat"><span class="stat-number">1</span><span class="stat-label">Minute</span></div>
+        <div class="stat"><span class="stat-number">Free</span><span class="stat-label">Forever</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CALCULATOR ============ -->
+  <section class="section section-alt" id="calculator">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-calculator"></i> Macro Calculator</span>
+        <h2 class="section-title">Your Daily <span class="highlight">Needs</span></h2>
+        <p class="section-subtitle">
+          Pick your info. We calculate your protein, carbs, fat, and water based on science.
+        </p>
+      </div>
+
+      <div class="quiz-wrapper">
+
+        <!-- Hidden radio inputs for state -->
+        <input type="radio" name="gender" id="g_male" class="q-radio" />
+        <input type="radio" name="gender" id="g_female" class="q-radio" />
+        <input type="radio" name="age" id="a_young" class="q-radio" />
+        <input type="radio" name="age" id="a_adult" class="q-radio" />
+        <input type="radio" name="age" id="a_mature" class="q-radio" />
+        <input type="radio" name="height" id="h_short" class="q-radio" />
+        <input type="radio" name="height" id="h_medium" class="q-radio" />
+        <input type="radio" name="height" id="h_tall" class="q-radio" />
+        <input type="radio" name="weight" id="w_light" class="q-radio" />
+        <input type="radio" name="weight" id="w_medium" class="q-radio" />
+        <input type="radio" name="weight" id="w_heavy" class="q-radio" />
+        <input type="radio" name="goal" id="goal_bulk" class="q-radio" />
+        <input type="radio" name="goal" id="goal_cut" class="q-radio" />
+        <input type="radio" name="goal" id="goal_maintain" class="q-radio" />
+
+        <!-- Progress -->
+        <div class="quiz-progress"><div class="quiz-progress-bar"></div></div>
+
+        <!-- Q1 GENDER -->
+        <div class="q-step step-1">
+          <div class="step-top">
+            <span class="step-count">Step 1 of 5</span>
+            <span class="step-title"><i class="fa-solid fa-user"></i> Gender</span>
+          </div>
+          <h3 class="q-q">What is your gender?</h3>
+          <p class="q-sub">This changes your base calorie needs.</p>
+          <div class="q-options two-cols">
+            <label for="g_male" class="q-option"><i class="fa-solid fa-mars"></i><strong>Male</strong></label>
+            <label for="g_female" class="q-option"><i class="fa-solid fa-venus"></i><strong>Female</strong></label>
+          </div>
+        </div>
+
+        <!-- Q2 AGE -->
+        <div class="q-step step-2">
+          <div class="step-top">
+            <span class="step-count">Step 2 of 5</span>
+            <span class="step-title"><i class="fa-solid fa-cake-candles"></i> Age</span>
+          </div>
+          <h3 class="q-q">How old are you?</h3>
+          <p class="q-sub">Metabolism changes with age.</p>
+          <div class="q-options three-cols">
+            <label for="a_young" class="q-option"><strong>16 — 25</strong><small>Fast metabolism</small></label>
+            <label for="a_adult" class="q-option"><strong>26 — 40</strong><small>Normal metabolism</small></label>
+            <label for="a_mature" class="q-option"><strong>41 +</strong><small>Slower metabolism</small></label>
+          </div>
+        </div>
+
+        <!-- Q3 HEIGHT -->
+        <div class="q-step step-3">
+          <div class="step-top">
+            <span class="step-count">Step 3 of 5</span>
+            <span class="step-title"><i class="fa-solid fa-ruler-vertical"></i> Height</span>
+          </div>
+          <h3 class="q-q">How tall are you?</h3>
+          <p class="q-sub">Pick the closest range.</p>
+          <div class="q-options three-cols">
+            <label for="h_short" class="q-option"><strong>Short</strong><small>Under 165 cm<br/>(under 5'5")</small></label>
+            <label for="h_medium" class="q-option"><strong>Medium</strong><small>165 — 180 cm<br/>(5'5" — 5'11")</small></label>
+            <label for="h_tall" class="q-option"><strong>Tall</strong><small>Over 180 cm<br/>(over 5'11")</small></label>
+          </div>
+        </div>
+
+        <!-- Q4 WEIGHT -->
+        <div class="q-step step-4">
+          <div class="step-top">
+            <span class="step-count">Step 4 of 5</span>
+            <span class="step-title"><i class="fa-solid fa-weight-scale"></i> Weight</span>
+          </div>
+          <h3 class="q-q">What is your weight?</h3>
+          <p class="q-sub">Pick the closest range.</p>
+          <div class="q-options three-cols">
+            <label for="w_light" class="q-option"><strong>Light</strong><small>Under 65 kg<br/>(under 143 lbs)</small></label>
+            <label for="w_medium" class="q-option"><strong>Medium</strong><small>65 — 85 kg<br/>(143 — 187 lbs)</small></label>
+            <label for="w_heavy" class="q-option"><strong>Heavy</strong><small>Over 85 kg<br/>(over 187 lbs)</small></label>
+          </div>
+        </div>
+
+        <!-- Q5 GOAL -->
+        <div class="q-step step-5">
+          <div class="step-top">
+            <span class="step-count">Step 5 of 5</span>
+            <span class="step-title"><i class="fa-solid fa-bullseye"></i> Goal</span>
+          </div>
+          <h3 class="q-q">What is your goal?</h3>
+          <p class="q-sub">Pick the one that fits you.</p>
+          <div class="q-options three-cols">
+            <label for="goal_bulk" class="q-option"><i class="fa-solid fa-dumbbell"></i><strong>Build Muscle</strong><small>Gain lean mass</small></label>
+            <label for="goal_cut" class="q-option"><i class="fa-solid fa-fire"></i><strong>Lose Fat</strong><small>Burn fat</small></label>
+            <label for="goal_maintain" class="q-option"><i class="fa-solid fa-scale-balanced"></i><strong>Stay Fit</strong><small>Keep shape</small></label>
+          </div>
+        </div>
+
+        <!-- ============= RESULTS ============= -->
+
+        <!-- MALE · LIGHT -->
+        <div class="result r-m-light-bulk">
+          <div class="result-title">
+            <h3>Your Plan</h3>
+            <p><strong>Male</strong> · Light body · <strong>Build Muscle</strong></p>
+          </div>
+          <div class="macro-grid">
+            <div class="macro-card macro-cal"><i class="fa-solid fa-fire-flame-curved"></i><span class="m-label">Calories</span><span class="m-val">2,400</span><span class="m-unit">kcal / day</span></div>
+            <div class="macro-card macro-pro"><i class="fa-solid fa-drumstick-bite"></i><span class="m-label">Protein</span><span class="m-val">165</span><span class="m-unit">grams / day</span></div>
+            <div class="macro-card macro-car"><i class="fa-solid fa-wheat-awn"></i><span class="m-label">Carbs</span><span class="m-val">280</span><span class="m-unit">grams / day</span></div>
+            <div class="macro-card macro-fat"><i class="fa-solid fa-seedling"></i><span class="m-label">Fat</span><span class="m-val">67</span><span class="m-unit">grams / day</span></div>
+            <div class="macro-card macro-wat"><i class="fa-solid fa-droplet"></i><span class="m-label">Water</span><span class="m-val">2.0</span><span class="m-unit">liters / day</span></div>
+          </div>
+        </div>
+
+        <div class="result r-m-light-cut">
+          <div class="result-title cut">
+            <h3>Your Plan</h3>
+            <p><strong>Male</strong> · Light body · <strong>Lose Fat</strong></p>
+          </div>
+          <div class="macro-grid">
+            <div class="macro-card macro-cal"><i class="fa-solid fa-fire-flame-curved"></i><span class="m-label">Calories</span><span class="m-val">1,700</span><span class="m-unit">kcal / day</span></div>
+            <div class="macro-card macro-pro"><i class="fa-solid fa-drumstick-bite"></i><span class="m-label">Protein</span><span class="m-val">165</span><span class="m-unit">grams / day</span></div>
+            <div class="macro-card macro-car"><i class="fa-solid fa-wheat-awn"></i><span class="m-label">Carbs</span><span class="m-val">130</span><span class="m-unit">grams / day</span></div>
+            <div class="macro-card macro-fat"><i class="fa-solid fa-seedling"></i><span class="m-label">Fat</span><span class="m-val">47</span><span class="m-unit">grams / day</span></div>
+            <div class="macro-card macro-wat"><i class="fa-solid fa-droplet"></i><span class="m-label">Water</span><span class="m-val">2.5</span><span class="m-unit">liters / day</span></div>
+          </div>
+        </div>
+
+        <div class="result r-m-light-maintain">
+          <div class="result-title maintain">
+            <h3>Your Plan</h3>
+            <p><strong>Male</strong> · Light body · <strong>Stay Fit</strong></p>
+          </div>
+          <div class="macro-grid">
+            <div class="macro-card macro-cal"><i class="fa-solid fa-fire-flame-curved"></i><span class="m-label">Calories</span><span class="m-val">2,050</span><span class="m-unit">kcal / day</span></div>
+            <div class="macro-card macro-pro"><i class="fa-solid fa-drumstick-bite"></i><span class="m-label">Protein</span><span class="m-val">165</span><span class="m-unit">grams / day</span></div>
+            <div class="macro-card macro-car"><i class="fa-solid fa-wheat-awn"></i><span class="m-label">Carbs</span><span class="m-val">210</span><span class="m-unit">grams / day</span></div>
+            <div class="macro-card macro-fat"><i class="fa-solid fa-seedling"></i><span class="m-label">Fat</span><span class="m-val">57</span><span class="m-unit">grams / day</span></div>
+            <div class="macro-card macro-wat"><i class="fa-solid fa-droplet"></i><span class="m-label">Water</span><span class="m-val">2.0</span><span class="m-unit">liters / day</span></div>
+          </div>
+        </div>
+
+        <!-- MALE · MEDIUM -->
+        <div class="result r-m-medium-bulk">
+          <div class="result-title">
+            <h3>Your Plan</h3>
+            <p><strong>Male</strong> · Medium body · <strong>Build Muscle</strong></p>
+          </div>
+          <div class="macro-grid">
+            <div class="macro-card macro-cal"><i class="fa-solid fa-fire-flame-curved"></i><span class="m-label">Calories</span><span class="m-val">2,750</span><span class="m-unit">kcal / day</span></div>
+            <div class="macro-card macro-pro"><i class="fa-solid fa-drumstick-bite"></i><span class="m-label">Protein</span><span class="m-val">175</span><span class="m-unit">grams / day</span></div>
+            <div class="macro-card macro-car"><i class="fa-solid fa-wheat-awn"></i><span class="m-label">Carbs</span><span class="m-val">330</span><span class="m-unit">grams / day</span></div>
+            <div class="macro-card macro-fat"><i class="fa-solid fa-seedling"></i><span class="m-label">Fat</span><span class="m-val">76</span><span class="m-unit">grams / day</span></div>
+            <div class="macro-card macro-wat"><i class="fa-solid fa-droplet"></i><span class="m-label">Water</span><span class="m-val">2.6</span><span class="m-unit">liters / day</span></div>
+          </div>
+        </div>
+
+        <div class="result r-m-medium-cut">
+          <div class="result-title cut">
+            <h3>Your Plan</h3>
+            <p><strong>Male</strong> · Medium body · <strong>Lose Fat</strong></p>
+          </div>
+          <div class="macro-grid">
+            <div class="macro-card macro-cal"><i class="fa-solid fa-fire-flame-curved"></i><span class="m-label">Calories</span><span class="m-val">2,000</span><span class="m-unit">kcal / day</span></div>
+            <div class="macro-card macro-pro"><i class="fa-solid fa-drumstick-bite"></i><span class="m-label">Protein</span><span class="m-val">175</span><span class="m-unit">grams / day</span></div>
+            <div class="macro-card macro-car"><i class="fa-solid fa-wheat-awn"></i><span class="m-label">Carbs</span><span class="m-val">155</span><span class="m-unit">grams / day</span></div>
+            <div class="macro-card macro-fat"><i class="fa-solid fa-seedling"></i><span class="m-label">Fat</span><span class="m-val">56</span><span class="m-unit">grams / day</span></div>
+            <div class="macro-card macro-wat"><i class="fa-solid fa-droplet"></i><span class="m-label">Water</span><span class="m-val">3.0</span><span class="m-unit">liters / day</span></div>
+          </div>
+        </div>
+
+        <div class="result r-m-medium-maintain">
+          <div class="result-title maintain">
+            <h3>Your Plan</h3>
+            <p><strong>Male</strong> · Medium body · <strong>Stay Fit</strong></p>
+          </div>
+          <div class="macro-grid">
+            <div class="macro-card macro-cal"><i class="fa-solid fa-fire-flame-curved"></i><span class="m-label">Calories</span><span class="m-val">2,400</span><span class="m-unit">kcal / day</span></div>
+            <div class="macro-card macro-pro"><i class="fa-solid fa-drumstick-bite"></i><span class="m-label">Protein</span><span class="m-val">175</span><span class="m-unit">grams / day</span></div>
+            <div class="macro-card macro-car"><i class="fa-solid fa-wheat-awn"></i><span class="m-label">Carbs</span><span class="m-val">250</span><span class="m-unit">grams / day</span></div>
+            <div class="macro-card macro-fat"><i class="fa-solid fa-seedling"></i><span class="m-label">Fat</span><span class="m-val">67</span><span class="m-unit">grams / day</span></div>
+            <div class="macro-card macro-wat"><i class="fa-solid fa-droplet"></i><span class="m-label">Water</span><span class="m-val">2.6</span><span class="m-unit">liters / day</span></div>
+          </div>
+        </div>
+
+        <!-- MALE · HEAVY -->
+        <div class="result r-m-heavy-bulk">
+          <div class="result-title">
+            <h3>Your Plan</h3>
+            <p><strong>Male</strong> · Heavy body · <strong>Build Muscle</strong></p>
+          </div>
+          <div class="macro-grid">
+            <div class="macro-card macro-cal"><i class="fa-solid fa-fire-flame-curved"></i><span class="m-label">Calories</span><span class="m-val">3,100</span><span class="m-unit">kcal / day</span></div>
+            <div class="macro-card macro-pro"><i class="fa-solid fa-drumstick-bite"></i><span class="m-label">Protein</span><span class="m-val">185</span><span class="m-unit">grams / day</span></div>
+            <div class="macro-card macro-car"><i class="fa-solid fa-wheat-awn"></i><span class="m-label">Carbs</span><span class="m-val">380</span><span class="m-unit">grams / day</span></div>
+            <div class="macro-card macro-fat"><i class="fa-solid fa-seedling"></i><span class="m-label">Fat</span><span class="m-val">86</span><span class="m-unit">grams / day</span></div>
+            <div class="macro-card macro-wat"><i class="fa-solid fa-droplet"></i><span class="m-label">Water</span><span class="m-val">3.3</span><span class="m-unit">liters / day</span></div>
+          </div>
+        </div>
+
+        <div class="result r-m-heavy-cut">
+          <div class="result-title cut">
+            <h3>Your Plan</h3>
+            <p><strong>Male</strong> · Heavy body · <strong>Lose Fat</strong></p>
+          </div>
+          <div class="macro-grid">
+            <div class="macro-card macro-cal"><i class="fa-solid fa-fire-flame-curved"></i><span class="m-label">Calories</span><span class="m-val">2,250</span><span class="m-unit">kcal / day</span></div>
+            <div class="macro-card macro-pro"><i class="fa-solid fa-drumstick-bite"></i><span class="m-label">Protein</span><span class="m-val">190</span><span class="m-unit">grams / day</span></div>
+            <div class="macro-card macro-car"><i class="fa-solid fa-wheat-awn"></i><span class="m-label">Carbs</span><span class="m-val">175</span><span class="m-unit">grams / day</span></div>
+            <div class="macro-card macro-fat"><i class="fa-solid fa-seedling"></i><span class="m-label">Fat</span><span class="m-val">63</span><span class="m-unit">grams / day</span></div>
+            <div class="macro-card macro-wat"><i class="fa-solid fa-droplet"></i><span class="m-label">Water</span><span class="m-val">3.5</span><span class="m-unit">liters / day</span></div>
+          </div>
+        </div>
+
+        <div class="result r-m-heavy-maintain">
+          <div class="result-title maintain">
+            <h3>Your Plan</h3>
+            <p><strong>Male</strong> · Heavy body · <strong>Stay Fit</strong></p>
+          </div>
+          <div class="macro-grid">
+            <div class="macro-card macro-cal"><i class="fa-solid fa-fire-flame-curved"></i><span class="m-label">Calories</span><span class="m-val">2,700</span><span class="m-unit">kcal / day</span></div>
+            <div class="macro-card macro-pro"><i class="fa-solid fa-drumstick-bite"></i><span class="m-label">Protein</span><span class="m-val">185</span><span class="m-unit">grams / day</span></div>
+            <div class="macro-card macro-car"><i class="fa-solid fa-wheat-awn"></i><span class="m-label">Carbs</span><span class="m-val">290</span><span class="m-unit">grams / day</span></div>
+            <div class="macro-card macro-fat"><i class="fa-solid fa-seedling"></i><span class="m-label">Fat</span><span class="m-val">75</span><span class="m-unit">grams / day</span></div>
+            <div class="macro-card macro-wat"><i class="fa-solid fa-droplet"></i><span class="m-label">Water</span><span class="m-val">3.3</span><span class="m-unit">liters / day</span></div>
+          </div>
+        </div>
+
+        <!-- FEMALE · LIGHT -->
+        <div class="result r-f-light-bulk">
+          <div class="result-title">
+            <h3>Your Plan</h3>
+            <p><strong>Female</strong> · Light body · <strong>Build Muscle</strong></p>
+          </div>
+          <div class="macro-grid">
+            <div class="macro-card macro-cal"><i class="fa-solid fa-fire-flame-curved"></i><span class="m-label">Calories</span><span class="m-val">2,000</span><span class="m-unit">kcal / day</span></div>
+            <div class="macro-card macro-pro"><i class="fa-solid fa-drumstick-bite"></i><span class="m-label">Protein</span><span class="m-val">160</span><span class="m-unit">grams / day</span></div>
+            <div class="macro-card macro-car"><i class="fa-solid fa-wheat-awn"></i><span class="m-label">Carbs</span><span class="m-val">230</span><span class="m-unit">grams / day</span></div>
+            <div class="macro-card macro-fat"><i class="fa-solid fa-seedling"></i><span class="m-label">Fat</span><span class="m-val">56</span><span class="m-unit">grams / day</span></div>
+            <div class="macro-card macro-wat"><i class="fa-solid fa-droplet"></i><span class="m-label">Water</span><span class="m-val">1.8</span><span class="m-unit">liters / day</span></div>
+          </div>
+        </div>
+
+        <div class="result r-f-light-cut">
+          <div class="result-title cut">
+            <h3>Your Plan</h3>
+            <p><strong>Female</strong> · Light body · <strong>Lose Fat</strong></p>
+          </div>
+          <div class="macro-grid">
+            <div class="macro-card macro-cal"><i class="fa-solid fa-fire-flame-curved"></i><span class="m-label">Calories</span><span class="m-val">1,400</span><span class="m-unit">kcal / day</span></div>
+            <div class="macro-card macro-pro"><i class="fa-solid fa-drumstick-bite"></i><span class="m-label">Protein</span><span class="m-val">160</span><span class="m-unit">grams / day</span></div>
+            <div class="macro-card macro-car"><i class="fa-solid fa-wheat-awn"></i><span class="m-label">Carbs</span><span class="m-val">85</span><span class="m-unit">grams / day</span></div>
+            <div class="macro-card macro-fat"><i class="fa-solid fa-seedling"></i><span class="m-label">Fat</span><span class="m-val">39</span><span class="m-unit">grams / day</span></div>
+            <div class="macro-card macro-wat"><i class="fa-solid fa-droplet"></i><span class="m-label">Water</span><span class="m-val">2.2</span><span class="m-unit">liters / day</span></div>
+          </div>
+        </div>
+
+        <div class="result r-f-light-maintain">
+          <div class="result-title maintain">
+            <h3>Your Plan</h3>
+            <p><strong>Female</strong> · Light body · <strong>Stay Fit</strong></p>
+          </div>
+          <div class="macro-grid">
+            <div class="macro-card macro-cal"><i class="fa-solid fa-fire-flame-curved"></i><span class="m-label">Calories</span><span class="m-val">1,700</span><span class="m-unit">kcal / day</span></div>
+            <div class="macro-card macro-pro"><i class="fa-solid fa-drumstick-bite"></i><span class="m-label">Protein</span><span class="m-val">160</span><span class="m-unit">grams / day</span></div>
+            <div class="macro-card macro-car"><i class="fa-solid fa-wheat-awn"></i><span class="m-label">Carbs</span><span class="m-val">155</span><span class="m-unit">grams / day</span></div>
+            <div class="macro-card macro-fat"><i class="fa-solid fa-seedling"></i><span class="m-label">Fat</span><span class="m-val">47</span><span class="m-unit">grams / day</span></div>
+            <div class="macro-card macro-wat"><i class="fa-solid fa-droplet"></i><span class="m-label">Water</span><span class="m-val">1.8</span><span class="m-unit">liters / day</span></div>
+          </div>
+        </div>
+
+        <!-- FEMALE · MEDIUM -->
+        <div class="result r-f-medium-bulk">
+          <div class="result-title">
+            <h3>Your Plan</h3>
+            <p><strong>Female</strong> · Medium body · <strong>Build Muscle</strong></p>
+          </div>
+          <div class="macro-grid">
+            <div class="macro-card macro-cal"><i class="fa-solid fa-fire-flame-curved"></i><span class="m-label">Calories</span><span class="m-val">2,250</span><span class="m-unit">kcal / day</span></div>
+            <div class="macro-card macro-pro"><i class="fa-solid fa-drumstick-bite"></i><span class="m-label">Protein</span><span class="m-val">168</span><span class="m-unit">grams / day</span></div>
+            <div class="macro-card macro-car"><i class="fa-solid fa-wheat-awn"></i><span class="m-label">Carbs</span><span class="m-val">260</span><span class="m-unit">grams / day</span></div>
+            <div class="macro-card macro-fat"><i class="fa-solid fa-seedling"></i><span class="m-label">Fat</span><span class="m-val">63</span><span class="m-unit">grams / day</span></div>
+            <div class="macro-card macro-wat"><i class="fa-solid fa-droplet"></i><span class="m-label">Water</span><span class="m-val">2.3</span><span class="m-unit">liters / day</span></div>
+          </div>
+        </div>
+
+        <div class="result r-f-medium-cut">
+          <div class="result-title cut">
+            <h3>Your Plan</h3>
+            <p><strong>Female</strong> · Medium body · <strong>Lose Fat</strong></p>
+          </div>
+          <div class="macro-grid">
+            <div class="macro-card macro-cal"><i class="fa-solid fa-fire-flame-curved"></i><span class="m-label">Calories</span><span class="m-val">1,600</span><span class="m-unit">kcal / day</span></div>
+            <div class="macro-card macro-pro"><i class="fa-solid fa-drumstick-bite"></i><span class="m-label">Protein</span><span class="m-val">168</span><span class="m-unit">grams / day</span></div>
+            <div class="macro-card macro-car"><i class="fa-solid fa-wheat-awn"></i><span class="m-label">Carbs</span><span class="m-val">100</span><span class="m-unit">grams / day</span></div>
+            <div class="macro-card macro-fat"><i class="fa-solid fa-seedling"></i><span class="m-label">Fat</span><span class="m-val">44</span><span class="m-unit">grams / day</span></div>
+            <div class="macro-card macro-wat"><i class="fa-solid fa-droplet"></i><span class="m-label">Water</span><span class="m-val">2.7</span><span class="m-unit">liters / day</span></div>
+          </div>
+        </div>
+
+        <div class="result r-f-medium-maintain">
+          <div class="result-title maintain">
+            <h3>Your Plan</h3>
+            <p><strong>Female</strong> · Medium body · <strong>Stay Fit</strong></p>
+          </div>
+          <div class="macro-grid">
+            <div class="macro-card macro-cal"><i class="fa-solid fa-fire-flame-curved"></i><span class="m-label">Calories</span><span class="m-val">1,950</span><span class="m-unit">kcal / day</span></div>
+            <div class="macro-card macro-pro"><i class="fa-solid fa-drumstick-bite"></i><span class="m-label">Protein</span><span class="m-val">168</span><span class="m-unit">grams / day</span></div>
+            <div class="macro-card macro-car"><i class="fa-solid fa-wheat-awn"></i><span class="m-label">Carbs</span><span class="m-val">185</span><span class="m-unit">grams / day</span></div>
+            <div class="macro-card macro-fat"><i class="fa-solid fa-seedling"></i><span class="m-label">Fat</span><span class="m-val">54</span><span class="m-unit">grams / day</span></div>
+            <div class="macro-card macro-wat"><i class="fa-solid fa-droplet"></i><span class="m-label">Water</span><span class="m-val">2.3</span><span class="m-unit">liters / day</span></div>
+          </div>
+        </div>
+
+        <!-- FEMALE · HEAVY -->
+        <div class="result r-f-heavy-bulk">
+          <div class="result-title">
+            <h3>Your Plan</h3>
+            <p><strong>Female</strong> · Heavy body · <strong>Build Muscle</strong></p>
+          </div>
+          <div class="macro-grid">
+            <div class="macro-card macro-cal"><i class="fa-solid fa-fire-flame-curved"></i><span class="m-label">Calories</span><span class="m-val">2,500</span><span class="m-unit">kcal / day</span></div>
+            <div class="macro-card macro-pro"><i class="fa-solid fa-drumstick-bite"></i><span class="m-label">Protein</span><span class="m-val">175</span><span class="m-unit">grams / day</span></div>
+            <div class="macro-card macro-car"><i class="fa-solid fa-wheat-awn"></i><span class="m-label">Carbs</span><span class="m-val">295</span><span class="m-unit">grams / day</span></div>
+            <div class="macro-card macro-fat"><i class="fa-solid fa-seedling"></i><span class="m-label">Fat</span><span class="m-val">69</span><span class="m-unit">grams / day</span></div>
+            <div class="macro-card macro-wat"><i class="fa-solid fa-droplet"></i><span class="m-label">Water</span><span class="m-val">2.8</span><span class="m-unit">liters / day</span></div>
+          </div>
+        </div>
+
+        <div class="result r-f-heavy-cut">
+          <div class="result-title cut">
+            <h3>Your Plan</h3>
+            <p><strong>Female</strong> · Heavy body · <strong>Lose Fat</strong></p>
+          </div>
+          <div class="macro-grid">
+            <div class="macro-card macro-cal"><i class="fa-solid fa-fire-flame-curved"></i><span class="m-label">Calories</span><span class="m-val">1,800</span><span class="m-unit">kcal / day</span></div>
+            <div class="macro-card macro-pro"><i class="fa-solid fa-drumstick-bite"></i><span class="m-label">Protein</span><span class="m-val">180</span><span class="m-unit">grams / day</span></div>
+            <div class="macro-card macro-car"><i class="fa-solid fa-wheat-awn"></i><span class="m-label">Carbs</span><span class="m-val">115</span><span class="m-unit">grams / day</span></div>
+            <div class="macro-card macro-fat"><i class="fa-solid fa-seedling"></i><span class="m-label">Fat</span><span class="m-val">50</span><span class="m-unit">grams / day</span></div>
+            <div class="macro-card macro-wat"><i class="fa-solid fa-droplet"></i><span class="m-label">Water</span><span class="m-val">3.2</span><span class="m-unit">liters / day</span></div>
+          </div>
+        </div>
+
+        <div class="result r-f-heavy-maintain">
+          <div class="result-title maintain">
+            <h3>Your Plan</h3>
+            <p><strong>Female</strong> · Heavy body · <strong>Stay Fit</strong></p>
+          </div>
+          <div class="macro-grid">
+            <div class="macro-card macro-cal"><i class="fa-solid fa-fire-flame-curved"></i><span class="m-label">Calories</span><span class="m-val">2,150</span><span class="m-unit">kcal / day</span></div>
+            <div class="macro-card macro-pro"><i class="fa-solid fa-drumstick-bite"></i><span class="m-label">Protein</span><span class="m-val">175</span><span class="m-unit">grams / day</span></div>
+            <div class="macro-card macro-car"><i class="fa-solid fa-wheat-awn"></i><span class="m-label">Carbs</span><span class="m-val">215</span><span class="m-unit">grams / day</span></div>
+            <div class="macro-card macro-fat"><i class="fa-solid fa-seedling"></i><span class="m-label">Fat</span><span class="m-val">60</span><span class="m-unit">grams / day</span></div>
+            <div class="macro-card macro-wat"><i class="fa-solid fa-droplet"></i><span class="m-label">Water</span><span class="m-val">2.8</span><span class="m-unit">liters / day</span></div>
+          </div>
+        </div>
+
+        <!-- FOOTER TIP & RESET -->
+        <div class="result-footer">
+          <div class="tip-box">
+            <i class="fa-solid fa-lightbulb"></i>
+            <strong>Note:</strong> Protein is based on height (e.g. 175cm = 175g). Water is weight × 35ml. These are science-based averages — be consistent for 2-3 weeks and adjust as needed.
+          </div>
+          <a href="" class="btn btn-primary">
+            <i class="fa-solid fa-rotate-right"></i> Start Over
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROGRAMS ============ -->
+  <section class="section" id="programs">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-bolt"></i> Workouts</span>
+        <h2 class="section-title">Weekly <span class="highlight">Programs</span></h2>
+        <p class="section-subtitle">3-day split. Simple, effective, time-friendly.</p>
+      </div>
+
+      <div class="cards-grid">
+        <article class="card">
+          <div class="card-image">
+            <img src="https://images.pexels.com/photos/703012/pexels-photo-703012.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Push Day" />
+            <span class="card-badge"><i class="fa-solid fa-clock"></i> 40 MIN</span>
+          </div>
+          <div class="card-body">
+            <span class="card-tag">Day 1 — Push</span>
+            <h3 class="card-title">40-Min Push Day</h3>
+            <p class="card-desc">Chest, shoulders, and triceps. Compound and isolation mix.</p>
+            <ul class="mini-list">
+              <li>Bench Press · 4 × 8</li>
+              <li>Overhead Press · 3 × 8</li>
+              <li>Incline Dumbbell Press · 4 × 10</li>
+              <li>Lateral Raise · 4 × 12</li>
+              <li>Triceps Pushdown · 3 × 12</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-image">
+            <img src="https://images.pexels.com/photos/791763/pexels-photo-791763.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Pull Day" />
+            <span class="card-badge"><i class="fa-solid fa-clock"></i> 40 MIN</span>
+          </div>
+          <div class="card-body">
+            <span class="card-tag">Day 2 — Pull</span>
+            <h3 class="card-title">40-Min Pull Day</h3>
+            <p class="card-desc">Back, rear delts, and biceps. Vertical and horizontal pulls.</p>
+            <ul class="mini-list">
+              <li>Barbell Row · 4 × 8</li>
+              <li>Pull-Up · 4 × 8-10</li>
+              <li>Seated Cable Row · 3 × 10</li>
+              <li>Face Pull · 3 × 15</li>
+              <li>Biceps Curl · 3 × 12</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-image">
+            <img src="https://images.pexels.com/photos/3253501/pexels-photo-3253501.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Leg Day" />
+            <span class="card-badge card-badge-hot"><i class="fa-solid fa-fire"></i> 45 MIN</span>
+          </div>
+          <div class="card-body">
+            <span class="card-tag">Day 3 — Legs</span>
+            <h3 class="card-title">45-Min Leg Day</h3>
+            <p class="card-desc">Quads, hamstrings, glutes, and calves. Full lower body.</p>
+            <ul class="mini-list">
+              <li>Back Squat · 5 × 5</li>
+              <li>Romanian Deadlift · 4 × 8</li>
+              <li>Leg Press · 3 × 12</li>
+              <li>Leg Curl · 4 × 10</li>
+              <li>Calf Raise · 4 × 15</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RECIPES ============ -->
+  <section class="section section-alt" id="recipes">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-utensils"></i> Kitchen</span>
+        <h2 class="section-title">Easy <span class="highlight">Recipes</span></h2>
+        <p class="section-subtitle">High protein, easy to cook, and delicious.</p>
+      </div>
+
+      <div class="cards-grid">
+        <article class="recipe-card">
+          <div class="recipe-image">
+            <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Fajita Bowl" />
+            <span class="recipe-badge"><i class="fa-solid fa-star"></i> Popular</span>
+          </div>
+          <div class="recipe-body">
+            <h3 class="card-title">Chicken Fajita Bowl</h3>
+            <p class="card-desc">Spicy chicken, peppers, black beans, guacamole, and salsa.</p>
+            <div class="recipe-info">
+              <span><i class="fa-solid fa-fire"></i> 620 kcal</span>
+              <span><i class="fa-solid fa-drumstick-bite"></i> 52g</span>
+              <span><i class="fa-solid fa-clock"></i> 25 min</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="recipe-card">
+          <div class="recipe-image">
+            <img src="https://images.pexels.com/photos/566566/pexels-photo-566566.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Oat Toast" />
+            <span class="recipe-badge"><i class="fa-solid fa-sun"></i> Breakfast</span>
+          </div>
+          <div class="recipe-body">
+            <h3 class="card-title">4-Egg Oat Toast</h3>
+            <p class="card-desc">Oat bread, 4 eggs, avocado, cheese, and chili flakes.</p>
+            <div class="recipe-info">
+              <span><i class="fa-solid fa-fire"></i> 480 kcal</span>
+              <span><i class="fa-solid fa-drumstick-bite"></i> 38g</span>
+              <span><i class="fa-solid fa-clock"></i> 12 min</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="recipe-card">
+          <div class="recipe-image">
+            <img src="https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Protein Pancakes" />
+            <span class="recipe-badge"><i class="fa-solid fa-bolt"></i> Post-Workout</span>
+          </div>
+          <div class="recipe-body">
+            <h3 class="card-title">Whey Protein Pancakes</h3>
+            <p class="card-desc">Whey, eggs, oat flour, and banana. Sweet recovery food.</p>
+            <div class="recipe-info">
+              <span><i class="fa-solid fa-fire"></i> 390 kcal</span>
+              <span><i class="fa-solid fa-drumstick-bite"></i> 42g</span>
+              <span><i class="fa-solid fa-clock"></i> 15 min</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#home" class="logo">
+          <i class="fa-solid fa-dumbbell"></i>
+          <span>LIFECODE</span>
+        </a>
+        <p>Simple fitness and nutrition for everyone.</p>
+      </div>
+
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 LIFECODE. All rights reserved. Code2Career project.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
